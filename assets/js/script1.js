@@ -1,3 +1,3 @@
-var message = require('./script2');
-
+require('../css/main.css');
+const message = require('./script2');
 alert(message);
