@@ -1,0 +1,13 @@
+$mainBgColour: blue;
+$mainColour: lightblue;
+
+.amg-strong{
+    text-align: center;
+    font-weight: 700;
+    color: $mainColour;
+    background: $mainBgColour;
+
+    h1 {
+        text-transform: uppercase;
+    }
+}
