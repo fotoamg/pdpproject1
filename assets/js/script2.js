@@ -1,2 +1,2 @@
-module.exports = 'hello';
+module.exports = 'hello bello !!! 3';
 
