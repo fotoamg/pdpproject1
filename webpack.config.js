@@ -1,5 +1,4 @@
 const path = require('path');
-/*const webpack = require('webpack');*/
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
@@ -49,7 +48,7 @@ module.exports = {
                         options: {
                             name: '[name].[ext]',
                             outputPath: 'img/',
-                            publicPath: 'img/'
+                            publicPath: './'
                         }
                     }
                 ]
@@ -61,8 +60,6 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: 'src/index.html'
         }),
-        /*new webpack.optimize.UglifyJsPlugin({
-        }),*/
         new CleanWebpackPlugin(['dist'])
     ]
 };
