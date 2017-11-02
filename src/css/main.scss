@@ -1,0 +1,54 @@
+$mainBgColour: blue;
+$mainColour: lightblue;
+
+.amg-strong{
+    text-align: center;
+    font-weight: 700;
+    color: $mainColour;
+    background: $mainBgColour;
+
+    h1 {
+        text-transform: uppercase;
+    }
+}
+
+body {
+    color: #42413b;
+    font-size: 87.5%;
+    line-height: 1.57;
+    -webkit-font-smoothing: antialiased
+}
+
+h1,
+h2,
+h3 {
+    color: #3E3D38;
+    font-weight: 700;
+    letter-spacing: -1px
+}
+h1 strong,
+h2 strong,
+h3 strong,
+h4,
+h4 strong,
+h5,
+h5 strong,
+h6,
+h6 strong {
+    color: #3E3D38
+}
+
+a {
+    color: #5b9300;
+    text-decoration: none;
+    -webkit-transition: color .1s linear
+}
+a:visited {
+    color: #3f6700
+}
+a:hover {
+    color: #7fcd00
+}
+a:active {
+    color: #76be00
+}
