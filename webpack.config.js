@@ -17,8 +17,8 @@ const isProd = ENV === 'build';
 
 const webpackConfig =  {
     entry: {
-        app: './src/js/app.js',
-         vendor: ["angular"]
+        core: './src/js/core.js',
+        vendor: ["angular"]
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
