@@ -1,5 +1,12 @@
 $mainBgColour: blue;
 $mainColour: lightblue;
+$mainBorder: black;
+
+.pizza-board {
+    display: block;
+    float: left;
+    border: solid 1px $mainBorder;
+}
 
 .amg-strong{
     text-align: center;

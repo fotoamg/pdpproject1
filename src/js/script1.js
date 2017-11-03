@@ -1,3 +1,5 @@
 import '../css/main.scss';
 const message = require('./script2');
-alert(message);
+
+console.log(message);
+
