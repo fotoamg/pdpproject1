@@ -3,6 +3,7 @@ const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const extractPlugin = new ExtractTextPlugin({
     filename: 'main.css'
@@ -12,7 +13,7 @@ const extractPlugin = new ExtractTextPlugin({
  * Env
  * Get npm lifecycle event to identify the environment
  */ /* Configure manualy here for prod or dev etc. env... or use the npm way */
-const ENV = 'dev'; /*process.env.npm_lifecycle_event;*/
+const ENV = 'DEV'; /*process.env.npm_lifecycle_event;*/
 const isProd = ENV === 'build';
 
 const webpackConfig =  {
@@ -84,6 +85,7 @@ const webpackConfig =  {
                     }
                 ]
             }
+
         ]
     },
     plugins: [
@@ -94,10 +96,13 @@ const webpackConfig =  {
         new webpack.optimize.CommonsChunkPlugin(
             {
                 name: "vendor",
-                filename: "vendor.js",
+                filename: isProd ? '[name].[hash].js' : '[name].js',
                 minChunks: Infinity
             }
         ),
+        new CopyWebpackPlugin([
+            {from:'src/static', to:'static'}
+        ]),
         new CleanWebpackPlugin(['dist'])
     ]
 };
