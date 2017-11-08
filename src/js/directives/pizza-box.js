@@ -1,23 +1,16 @@
-const INIT = new WeakMap();
-const PIZZALISTSVC = new WeakMap();
+class PizzaListController {
+    constructor(PizzaListSvc){
+        this.PizzaListSvc = PizzaListSvc;
+        this.PizzaListSvc.get(this).getPizzaList().then(pizzas => {
+            this.pizzas = pizzas;
+            this.pizzaJson = JSON.stringify(pizzas);
+        });
+    }
+}
+
+PizzaListController.$inject =   ['PizzaListSvc'];
 
 export default ngModule => {
-
-    class PizzaListController {
-        constructor(PizzaListSvc){
-            PIZZALISTSVC.set(this, PizzaListSvc);
-
-            INIT.set(this, () => {
-                PIZZALISTSVC.get(this).getPizzaList().then(pizzas => {
-                    this.pizzas = pizzas;
-                    this.pizzaJson = JSON.stringify(pizzas);
-                });
-            });
-
-            INIT.get(this)();
-        }
-    }
-
     ngModule.directive('pizzaBox', () => {
         return {
             restrict: 'E',
