@@ -2,13 +2,14 @@ $mainBgColour: blue;
 $mainColour: lightblue;
 $mainBorder: black;
 
-.pizza-board {
+.pizza-box {
     display: block;
     float: left;
     border: solid 1px $mainBorder;
+    padding: 5px;
 }
 
-.amg-strong{
+.amg-strong {
     text-align: center;
     font-weight: 700;
     color: $mainColour;

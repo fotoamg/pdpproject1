@@ -1,6 +1,4 @@
 import ngModule from '../module';
-/*import angular from 'angular';
-let ngModule = angular.module('app', []);*/
 
 console.log("service", ngModule);
 

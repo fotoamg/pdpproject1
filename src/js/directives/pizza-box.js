@@ -4,7 +4,7 @@ console.log("box directive", ngModule);
 
 export class PizzaBoxController {
     constructor(){
-        /*this.pizza = pizza;*/
+
     }
 }
 

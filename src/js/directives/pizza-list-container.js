@@ -10,7 +10,6 @@ export class PizzaListController {
         this.PizzaListSvc = PizzaListSvc;
         this.PizzaListSvc.getPizzaList().then(pizzas => {
             this.pizzas = pizzas;
-            this.pizzaJson = JSON.stringify(pizzas);
         });
     }
 }
