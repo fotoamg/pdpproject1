@@ -1,23 +1,22 @@
-class PizzaListController {
-    constructor(PizzaListSvc){
-        this.PizzaListSvc = PizzaListSvc;
-        this.PizzaListSvc.get(this).getPizzaList().then(pizzas => {
-            this.pizzas = pizzas;
-            this.pizzaJson = JSON.stringify(pizzas);
-        });
+import ngModule from '../module';
+
+console.log("box directive", ngModule);
+
+export class PizzaBoxController {
+    constructor(){
+        /*this.pizza = pizza;*/
     }
 }
 
-PizzaListController.$inject =   ['PizzaListSvc'];
-
-export default ngModule => {
-    ngModule.directive('pizzaBox', () => {
+ export default ngModule.directive('pizzaBox', () => {
         return {
             restrict: 'E',
-            scope: {},
+            scope:{
+                pizza: '=pizza'
+            },
             template: require('./pizza-box.html'),
             controllerAs: 'vm',
-            controller: PizzaListController
+            controller: PizzaBoxController
         }
-    } )
-}
+    } );
+

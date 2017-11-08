@@ -1,5 +1,10 @@
-class PizzaList {
+import ngModule from '../module';
+/*import angular from 'angular';
+let ngModule = angular.module('app', []);*/
 
+console.log("service", ngModule);
+
+export class PizzaList {
     constructor($http) {
         Object.assign(this, {
             $http,
@@ -13,10 +18,4 @@ class PizzaList {
 
 PizzaList.$inject =   ['$http'];
 
-
-export default ngModule => {
-    ngModule.service('PizzaListSvc', () => {
-        return PizzaList;
-    })
-
-}
+export default ngModule.service('PizzaListSvc', PizzaList);

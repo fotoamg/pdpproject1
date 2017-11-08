@@ -1,45 +1,39 @@
 [
   {
-    id: 1,
-    picuri: 'http://lorempizza.com/240/240',
-    title: 'marinara',
-    desc: 'Paradicsomszosz, Fokhagyma, Oregano, Olivaolaj',
-    qti: 0
-  },
-  {
-    id: 2,
-    picuri: 'http://lorempizza.com/240/240',
-    title: 'margherita',
-    desc: 'Paradicsomszosz, Mozzarella, Bazsalikom, Olivaolaj',
-    qti: 0
-  },
-  {
-    id: 3,
-    picuri: 'http://lorempizza.com/240/240',
-    title: 'diavola',
-    desc: 'Paradicsomszos, Mozzarella, Salsiccia Piccante (Olasz csipos szalami), Chili, Olivaolaj',
-    qti: 0
-  },
-  {
-    id: 4,
-    picuri: 'http://lorempizza.com/240/240',
-    title: 'wurstel e patatine',
-    desc: 'Mozzarella, Virsli, Sult burgonya, Olivaolaj',
-    qti: 0
-  },
-  {
-    id: 5,
-    picuri: 'http://lorempizza.com/240/240',
-    title: 'salame e funghi',
-    desc: 'PAradicsomszosz, Mozzarella,Salsiccia Piccante (Olasz csipos szalami), Champion gomba, Olivaolaj',
-    qti: 0
-  },
-  {
-    id: 6,
-    picuri: 'http://lorempizza.com/240/240',
-    title: 'calzone',
-    desc: 'PAradicsomszosz, Prosciutto cotto (Olasz fott sonka), Champion gomba, Mozzarella, Olivaolaj - Félbe hajtva sütve',
-    qti: 0
+    "id" : 1,
+    "picuri" : "http://lorempizza.com/240/240",
+    "title" : "marinara",
+    "desc" : "Paradicsomszosz, Fokhagyma, Oregano, Olivaolaj",
+    "qti" : 0
+  }, {
+    "id" : 2,
+    "picuri" : "http://lorempizza.com/240/240",
+    "title" : "margherita",
+    "desc" : "Paradicsomszosz, Mozzarella, Bazsalikom, Olivaolaj",
+    "qti" : 0
+  }, {
+    "id" : 3,
+    "picuri" : "http://lorempizza.com/240/240",
+    "title" : "diavola",
+    "desc" : "Paradicsomszos, Mozzarella, Salsiccia Piccante (Olasz csipos szalami), Chili, Olivaolaj",
+    "qti" : 0
+  }, {
+    "id" : 4,
+    "picuri" : "http://lorempizza.com/240/240",
+    "title" : "wurstel e patatine",
+    "desc" : "Mozzarella, Virsli, Sult burgonya, Olivaolaj",
+    "qti" : 0
+  }, {
+    "id" : 5,
+    "picuri" : "http://lorempizza.com/240/240",
+    "title" : "salame e funghi",
+    "desc" : "PAradicsomszosz, Mozzarella,Salsiccia Piccante (Olasz csipos szalami), Champion gomba, Olivaolaj",
+    "qti" : 0
+  }, {
+    "id" : 6,
+    "picuri" : "http://lorempizza.com/240/240",
+    "title" : "calzone",
+    "desc" : "PAradicsomszosz, Prosciutto cotto (Olasz fott sonka), Champion gomba, Mozzarella, Olivaolaj - Félbe hajtva sütve",
+    "qti" : 0
   }
-
 ]

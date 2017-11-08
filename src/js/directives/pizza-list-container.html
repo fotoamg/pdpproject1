@@ -1,0 +1,8 @@
+<div class="pizza-list-container">
+    <div>Pizza lista!</div>
+    <label>{{vm.pizzas}}</label>
+    <label>{{vm.pizzaJson}}</label>
+    <div ng-repeat="pizza in vm.pizzas track by pizza.id">
+        <pizza-box data-pizza="{{pizza}}"></pizza-box>
+    </div>
+</div>
