@@ -2,11 +2,70 @@ $mainBgColour: blue;
 $mainColour: lightblue;
 $mainBorder: black;
 
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
+
+.pizza-board {
+    width: 786px;
+    margin: auto;
+    padding: 5px;
+    background-color: white;
+    border: solid 1px $mainBorder;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.pizza-list-container {
+    width: 800px;
+    /*height: -webkit-fill-available;*/
+    text-align: center;
+}
+
 .pizza-box {
+    text-align: left;
     display: block;
     float: left;
     border: solid 1px $mainBorder;
     padding: 5px;
+    margin: 2px;
+    white-space: wrap;
+    width: 245px;
+    height: 340px;
+}
+
+.pizza-title {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0px;
+}
+
+.pizza-desc {
+    margin: 0px;
+}
+
+#background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -9999;
+}
+
+.stretch {
+    width:100%;
+    height:100%;
 }
 
 .amg-strong {

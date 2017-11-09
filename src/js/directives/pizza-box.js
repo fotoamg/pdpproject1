@@ -12,7 +12,7 @@ export class PizzaBoxController {
         return {
             restrict: 'E',
             scope:{
-                pizza: '=pizza'
+                pizza: '='
             },
             template: require('./pizza-box.html'),
             controllerAs: 'vm',
