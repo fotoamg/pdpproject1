@@ -1,4 +1,6 @@
 import ngModule from '../module';
+import './pizza-box-top-list';
+import './pizza-box-bottom-list';
 
 console.log("box directive", ngModule);
 

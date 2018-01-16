@@ -1,5 +1,4 @@
 <div class="pizza-box clearfix">
-    <img ng-src="{{pizza.picuri}}?{{pizza.id}}">
-    <p class="pizza-title">{{pizza.title}}</p>
-    <p class="pizza-desc">{{pizza.desc}}</p>
+    <pizza-box-top-list data-pizza="pizza"></pizza-box-top-list>
+    <pizza-box-bottom-list data-pizza="pizza"></pizza-box-bottom-list>
 </div>

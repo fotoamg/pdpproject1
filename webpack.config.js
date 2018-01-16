@@ -55,6 +55,14 @@ const webpackConfig =  {
                 })
 
             },
+            {   
+                test: /\.(woff2?|ttf|eot|svg)$/,
+                loader: 'url?limit=10000' 
+            },
+            { 
+                test: /bootstrap\/dist\/js\/umd\//, 
+                loader: 'imports?jQuery=jquery' 
+            },
             {
                 test: /\.html$/,
                 use: ['html-loader']
@@ -103,7 +111,12 @@ const webpackConfig =  {
         new CopyWebpackPlugin([
             {from:'src/static', to:'static'}
         ]),
-        new CleanWebpackPlugin(['dist'])
+        new CleanWebpackPlugin(['dist']),
+            new webpack.ProvidePlugin({
+        jQuery: 'jquery',
+        $: 'jquery',
+        jquery: 'jquery'
+    })
     ]
 };
 
@@ -113,14 +126,12 @@ if (isProd) {
         // Only emit files when there are no errors
         new webpack.NoErrorsPlugin(),
 
-        // Reference: http://webpack.github.io/docs/list-of-plugins.html#dedupeplugin
-        // Dedupe modules in the output
-        new webpack.optimize.DedupePlugin(),
-
         // Reference: http://webpack.github.io/docs/list-of-plugins.html#uglifyjsplugin
         // Minify all javascript, switch loaders to minimizing mode
         new webpack.optimize.UglifyJsPlugin()
     )
 }
+
+
 
 module.exports = webpackConfig;

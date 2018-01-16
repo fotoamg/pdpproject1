@@ -2,6 +2,7 @@ import ngModule from '../module';
 import '../services/pizzalist';
 import './pizza-box';
 
+
 console.log("list directive", ngModule);
 
 export class PizzaListController {

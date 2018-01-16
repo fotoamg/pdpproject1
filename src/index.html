@@ -4,13 +4,13 @@
         <meta charset="UTF-8">
         <title>PDP Project 1 - AMG </title>
     </head>
-    <body background="img/pizza_landscape1.jpg" ng-app="app">
-        <div id="background">
-            <img src="img/pizza_landscape1.jpg" class="stretch" alt="pizza">
+    <body ng-app="app">
+        <div>
+            <a href="#/!">Home</a> 
+            <a href="#!cart">Cart</a> 
+            <a href="#!about">About</a> 
         </div>
-        <div class="pizza-board clearfix">
-            <pizza-list-container></pizza-list-container>
-        </div>
+        <div ng-view></div>
         <footer>
         </footer>
     </body>

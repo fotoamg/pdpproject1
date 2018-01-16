@@ -26,6 +26,17 @@ $mainBorder: black;
     text-align: center;
 }
 
+.addtoCartButton {
+    background-color: orange;
+    border: none;
+    color: white;
+    padding: 6px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    border-radius: 8px;
+}
 .pizza-list-container {
     width: 800px;
     /*height: -webkit-fill-available;*/
@@ -33,7 +44,7 @@ $mainBorder: black;
 }
 
 .pizza-box {
-    text-align: left;
+    text-align: center;
     display: block;
     float: left;
     border: solid 1px $mainBorder;
@@ -41,9 +52,25 @@ $mainBorder: black;
     margin: 2px;
     white-space: wrap;
     width: 245px;
-    height: 340px;
+    height: 365px;
 }
 
+pizza-box-top-list {
+    text-align: left;
+    vertical-align: bottom;
+    float: none;
+}
+
+pizza-box-bottom-list {
+    vertical-align: middle;
+    float: none;
+}
+
+.pizza-box input {
+    vertical-align: bottom;
+    display: inline;
+    float: none;
+}
 .pizza-title {
     text-transform: uppercase;
     font-weight: bold;
