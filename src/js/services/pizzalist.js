@@ -7,10 +7,12 @@ export class PizzaList {
         Object.assign(this, {
             $http,
         });
+        this.pizzaList = this.$http.get('/static/pizzalist.json').then(result => result.data);
     }
 
     getPizzaList() {
-        return this.$http.get('/static/pizzalist.json').then(result => result.data);
+        console.log(this.pizzaList);
+        return this.pizzaList;
     }
 };
 

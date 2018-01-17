@@ -7,15 +7,15 @@ export class PizzaBoxBottomListController {
 
     }
 
-    addToCart() {
-        console.log('add to cart!!!');
+    addToCart(item) {
+        console.log('add to cart!!! ', item);
     }
 }
 
  export default ngModule.directive('pizzaBoxBottomList', () => {
         return {
             restrict: 'E',
-            scope:{
+            scope: {
                 pizza: '='
             },
             template: require('./pizza-box-bottom-list.html'),
