@@ -1,6 +1,6 @@
 import ngModule from '../module';
 
-console.log("service", ngModule);
+console.log("pizzalist service ngModule", ngModule);
 
 export class PizzaList {
     constructor($http) {

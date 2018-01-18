@@ -22,7 +22,7 @@ PizzaListController.$inject = ['PizzaListSvc'];
             restrict: 'E',
             scope: {},
             template: require('./pizza-list-container.html'),
-            controllerAs: 'vm',
+            controllerAs: 'PizzaListController',
             controller: PizzaListController
         }
     } );

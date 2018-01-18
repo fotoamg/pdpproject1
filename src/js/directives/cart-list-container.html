@@ -1,0 +1,10 @@
+<div class="pizza-list-container clearfix">
+    <div>CART</div>
+
+    <div ng-repeat="pizza in CartListController.pizzas track by pizza.id">
+        <div ng-if="pizza.pcs > 0">
+            <p class="pizza-desc">{{pizza.desc}}</p> - 
+            <p class="pizza-desc">{{pizza.pcs}}</p>
+        </div>
+    </div>
+</div>

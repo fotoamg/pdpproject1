@@ -3,3 +3,4 @@ import '../css/main.scss';
 /*import 'jquery';
 import 'bootstrap-loader';*/
 import './directives/pizza-list-container';
+import './directives/cart-list-container';

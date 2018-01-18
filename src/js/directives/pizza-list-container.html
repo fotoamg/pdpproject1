@@ -1,7 +1,7 @@
 <div class="pizza-list-container clearfix">
     <div>Pizza lista!</div>
 
-    <div ng-repeat="pizza in vm.pizzas track by pizza.id">
+    <div ng-repeat="pizza in PizzaListController.pizzas track by pizza.id">
         <pizza-box data-pizza="pizza"></pizza-box>
     </div>
 </div>

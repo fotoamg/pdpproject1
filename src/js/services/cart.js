@@ -1,20 +1,30 @@
 import ngModule from '../module';
 
-console.log("service", ngModule);
+console.log("cart service ngModule", ngModule);
 
 export class Cart {
     constructor() {
-        this.cart = {};
+        this.cart = new Map();
     }
 
-    getCart() {
+    getCartAsArray() {
+        return Array.from(this.cart);
+    }
+
+    getCartMap() {
         return this.cart;
     }
 
     addToCart(id, count) {
-        
+        let item = this.cart.get(id);
+        if (!this.cart.has(id)) {
+            item =  { 'pcs' : count };
+            this.cart.set(id, item);
+        } else {
+            item['pcs'] += count;
+        }
     }
 };
 
 
-export default ngModule.service('CartSvc', CartList);
+export default ngModule.service('CartSvc', Cart);
