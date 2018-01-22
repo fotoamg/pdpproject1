@@ -1,10 +1,28 @@
 <div class="pizza-list-container clearfix">
-    <div>CART</div>
+    <div>Kosár</div>
 
     <div ng-repeat="pizza in CartListController.pizzas track by pizza.id">
         <div ng-if="pizza.pcs > 0">
-            <p class="pizza-desc">{{pizza.desc}}</p> - 
-            <p class="pizza-desc">{{pizza.pcs}}</p>
+            <div class="cart-list-item clearfix">
+                <div class="pizza-cart-name clearfix">
+                        <span class="pizza-title">{{pizza.title}}</span> (<span class="cart-pizza-short-desc">{{pizza.desc}}</span>)
+                </div>
+                <div class="cart-numbers">{{pizza.pcs}}</div>
+                <div class="cart-actions"><span ng-click="CartListController.deleteFromCart(pizza.id)" class="glyphicon glyphicon-trash"></span></div>
+            </div>
         </div>
+    </div>
+    <div ng-if="CartListController.cart.size < 1" >
+            <div class="cart-list-item clearfix">
+                    <p class="cart-empty">Üres a kosár!</p>
+            </div>
+    </div>
+    <div ng-if="CartListController.cart.size > 1" >
+            <div class="cart-list-item empty-cart-action clearfix">
+                    <span class="cart-empty">Kosár ürítése
+                        <span ng-click="CartListController.emptyCart()"
+                            class="glyphicon glyphicon-trash"></span>
+                    </span>
+            </div>
     </div>
 </div>

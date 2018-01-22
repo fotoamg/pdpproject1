@@ -3,6 +3,7 @@
 $mainBgColour: blue;
 $mainColour: lightblue;
 $mainBorder: black;
+$boardWidth: 788px;
 
 .clearfix:after {
     visibility: hidden;
@@ -18,14 +19,40 @@ $mainBorder: black;
 .clearfix { display: block; }
 /* close commented backslash hack */
 
-.pizza-board {
-    width: 786px;
+.pizza-board, .cart-outer {
+    width: $boardWidth;
     margin: auto;
     padding: 5px;
     background-color: white;
     border: solid 1px $mainBorder;
     border-radius: 15px;
     text-align: center;
+}
+
+
+.main-menu {
+    width: $boardWidth;
+    margin: auto;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color:red;
+    border: solid 1px $mainBorder;
+    border-radius: 15px;
+    text-align: left;
+    color: white;
+    text-decoration: none;
+}
+
+.main-menu-inner button {
+    margin: auto;
+    padding: 5px;
+    background-color:red;
+    border-radius: 15px;
+    text-align: left;
+    color: white;
+    font-size: 16px;
 }
 
 .addtoCartButton {
@@ -38,7 +65,55 @@ $mainBorder: black;
     display: inline-block;
     margin: 4px 2px;
     border-radius: 8px;
+    cursor: pointer;
 }
+
+
+.cart-list-item {
+    width: $boardWidth - 60px;
+    text-align: left;
+    display: block;
+    padding: 5px;
+    margin: 2px;
+    white-space: normal;
+}
+
+.pizza-cart-name {
+    float: left;
+}
+
+.cart-actions {
+    width: 10px;
+    float: right;
+    margin-right: -30px;
+    cursor: pointer;
+}
+
+.cart-numbers {
+    float: right;
+    width: 16px;
+    text-align: right;
+}
+
+.cart-empty {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.empty-cart-action {
+    text-align: center;
+}
+
+.empty-cart-action .glyphicon {
+    cursor: pointer;
+}
+
+.cart-pizza-short-desc {
+    float: none;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
 .pizza-list-container {
     width: 800px;
     /*height: -webkit-fill-available;*/
@@ -55,7 +130,7 @@ $mainBorder: black;
     margin: 2px;
     white-space: wrap;
     width: 255px;
-    height: 365px;
+    height: 395px;
 }
 
 pizza-box-top-list {

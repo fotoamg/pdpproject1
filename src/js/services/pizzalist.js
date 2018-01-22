@@ -14,6 +14,18 @@ export class PizzaList {
         console.log(this.pizzaList);
         return this.pizzaList;
     }
+
+    getPizzaListCopy(pizzas) {
+        console.log('PIZZASSSSS', pizzas);
+        let copied = [];
+        pizzas.forEach(
+            pizza => {
+                copied.push(Object.assign({}, pizza));
+            }
+        ) 
+        console.log(copied);
+        return copied;
+    }
 };
 
 PizzaList.$inject =   ['$http'];
