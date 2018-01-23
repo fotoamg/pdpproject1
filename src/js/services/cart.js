@@ -32,7 +32,7 @@ export class Cart {
 
     deleteItem(id) {
         this.cart.delete(id);
-        localStorage.setItem("pizzacart delete", JSON.stringify([...this.cart]));
+        localStorage.setItem("pizzacart", JSON.stringify([...this.cart]));
     }
 
     addToCart(id, count) {
@@ -45,7 +45,7 @@ export class Cart {
         }
         console.log('cartJSON: ' + JSON.stringify([...this.cart]));
         console.log('cart: ', this.cart);
-        localStorage.setItem("pizzacart add", JSON.stringify([...this.cart]));
+        localStorage.setItem("pizzacart", JSON.stringify([...this.cart]));
     }
 };
 
